@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Exotic | Michigan Cannabis Processing</title>
+
+  <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #5e4b56, #1d3c34);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #1d3c34;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #007b59;
+    }
+
+    /* Main Content Sections */
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      color: #1d3c34;
+    }
+
+    .products {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    /* Product Cards */
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      padding: 20px;
+      font-size: 1.6rem;
+      color: #333;
+    }
+
+    .card p {
+      padding: 0 20px;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    .card button {
+      margin: 20px;
+      padding: 10px 25px;
+      background: #007b59;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .card button:hover {
+      background: #1d3c34;
+    }
+
+    /* Order Summary */
+    #orderSummary {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    #orderList {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .email-btn {
+      background: #007b59;
+      color: white;
+      width: 100%;
+      padding: 14px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .email-btn:hover {
+      background: #1d3c34;
+    }
+
+    /* Footer */
+    footer {
+      background: #1d3c34;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Scroll Animation */
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: 0.6s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="fade">
+    <h1>Green Exotic</h1>
+    <p>Premium Cannabis Processing | Michigan Wholesale</p>
+  </header>
+
+  <nav>
+    <a href="#products">Products</a>
+    <a href="#order">Order</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- PRODUCTS SECTION -->
+  <section id="products">
+    <h2 class="fade">Available Products</h2>
+    <div class="products">
+      <!-- Product Card 1 -->
+      <div class="card fade">
+        <img src="https://via.placeholder.com/400x250" alt="Exotic Flower">
+        <h3>Exotic Flower – Batch A</h3>
+        <p>THC: 28% | Indoor | Premium Cure</p>
+        <button onclick="addToOrder('Exotic Flower – Batch A')">Add to Order</button>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="card fade">
+        <img src="https://via.placeholder.com/400x250" alt="Live Resin">
+        <h3>Live Resin – Premium</h3>
+        <p>THC: 85% | Small Batch Extraction</p>
+        <button onclick="addToOrder('Live Resin – Premium')">Add to Order</button>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="card fade">
+        <img src="https://via.placeholder.com/400x250" alt="Distillate">
+        <h3>Distillate – Bulk</h3>
+        <p>THC: 90% | Wholesale Ready</p>
+        <button onclick="addToOrder('Distillate – Bulk')">Add to Order</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER SUMMARY SECTION -->
+  <section id="order">
+    <h2 class="fade">Order Summary</h2>
+    <div id="orderSummary" class="fade">
+      <div id="orderList">No products added yet.</div>
+      <button class="email-btn" onclick="sendOrder()">Email Purchasing</button>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2 class="fade">Contact</h2>
+    <p style="text-align:center;">Wholesale inquiries: <strong>riley@greenexotic.net</strong></p>
+    <p style="text-align:center;">Serving Licensed Michigan Cannabis Retailers</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2026 Green Exotic | Michigan Cannabis Processing Facility
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    let order = [];
+
+    function addToOrder(product) {
+      order.push(product);
+      document.getElementById("orderList").innerHTML = order.map((item, index) => `${index + 1}. ${item}`).join("<br>");
+    }
+
+    function sendOrder() {
+      if (order.length === 0) {
+        alert("Please add products before sending order.");
+        return;
+      }
+
+      let body = "Order Request:%0D%0A%0D%0A";
+      order.forEach((item, index) => {
+        body += (index + 1) + ". " + item + "%0D%0A";
+      });
+
+      window.location.href =
+        "mailto:riley@greenexotic.net?subject=Green Exotic Order Request&body=" + body;
+    }
+
+    // Scroll fade animation
+    const faders = document.querySelectorAll('.fade');
+    window.addEventListener('scroll', () => {
+      faders.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+          el.classList.add('show');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
